@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# SOUS Baking Measurement Device UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A touch-based interface for the SOUS baking measurement device, optimized for 5-7" screens with animations and haptic feedback.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Touch-Optimized UI**: Large touch targets (48x48px minimum) with appropriate spacing
+- **Responsive Design**: Tailwind CSS for consistent styling across screen sizes
+- **Animated Interactions**: Visual feedback for all user interactions
+- **Dark/Light Modes**: Support for different lighting conditions
+- **Offline Functionality**: Core features work without network connectivity
+- **Measurement Simulation**: Realistic weight/volume changes with random variations
 
-### `npm start`
+## Key Screens
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Home**: Quick access to recipes, measurement tools, and ingredients
+- **Recipe Browser**: Searchable recipe collection with filtering options
+- **Recipe Detail**: Step-by-step instructions with ingredient lists
+- **Guided Baking Mode**: Interactive cooking assistant with timers
+- **Measure Interface**: Precision measurement tools with target weights
+- **Ingredient Browser**: Searchable ingredient database with nutritional info
+- **Settings**: User preferences and device configuration
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Development
 
-### `npm test`
+```bash
+# Install dependencies
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Start development server
+npm start
 
-### `npm run build`
+# Build for production
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## GitHub Pages Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Push to GitHub
+2. Go to Settings > Pages > Select "GitHub Actions" as source
+3. Set "Workflow permissions" to "Read and write" in Settings > Actions > General
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The site will be available at `https://[username].github.io/sous-app/`
