@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-sous-background text-gray-900 dark:text-white;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .sous-button {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200
+    disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .sous-button.bg-sous-primary {
+    @apply text-white hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+
+  .sous-button.bg-sous-secondary {
+    @apply text-white hover:bg-gray-600 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
+  }
+
+  .sous-input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700
+    bg-white dark:bg-gray-800 text-gray-900 dark:text-white
+    focus:ring-2 focus:ring-sous-primary focus:border-transparent;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
