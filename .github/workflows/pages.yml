@@ -32,17 +32,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        working-directory: ./sous-app
         run: npm ci
       - name: Build
-        working-directory: ./sous-app
         run: npm run build
       - name: Create .nojekyll file
-        run: touch sous-app/build/.nojekyll
+        run: touch build/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './sous-app/build'
+          path: './build'
 
   # Deployment job
   deploy:
