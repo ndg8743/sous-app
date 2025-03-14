@@ -38,6 +38,7 @@ npm run build
 
 1. Push to GitHub
 2. Go to Settings > Actions > General > Set "Workflow permissions" to "Read and write"
-3. The GitHub Actions workflow will automatically deploy to GitHub Pages
+3. Go to Settings > Pages > Build and deployment > Source > Select "GitHub Actions"
+4. The GitHub Actions workflow will automatically deploy to GitHub Pages
 
-The site will be available at `https://[username].github.io/sous-app/`
+The site will be available at `https://ndg8743.github.io/sous-app/`

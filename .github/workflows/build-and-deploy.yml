@@ -1,10 +1,8 @@
-name: Build and Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages (Disabled)
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  # Disabled workflow
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -35,9 +33,14 @@ jobs:
       working-directory: ./sous-app
       run: npm run build
     
+    - name: Create .nojekyll file
+      run: touch sous-app/build/.nojekyll
+    
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: sous-app/build
-        branch: gh-pages
+        branch: github-pages
         clean: true
+        clean-exclude: |
+          .nojekyll
