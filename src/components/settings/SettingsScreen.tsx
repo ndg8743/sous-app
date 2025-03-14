@@ -13,7 +13,7 @@ const SettingsScreen: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-sous-background dark:bg-gray-900 pb-20">
+    <div className="pb-20">
       <div className="p-4">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
           Settings

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { recipes } from '../../data/mockData';
-import Header from '../layout/Header';
 
 const RecipeDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -12,8 +11,7 @@ const RecipeDetail: React.FC = () => {
 
   if (!recipe) {
     return (
-      <div className="min-h-screen bg-sous-background">
-        <Header title="Recipe Not Found" showBackButton />
+      <div className="pb-20">
         <div className="p-4">
           <p className="text-gray-600 dark:text-gray-400">Recipe not found.</p>
         </div>
@@ -26,8 +24,7 @@ const RecipeDetail: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-sous-background">
-      <Header title={recipe.name} showBackButton />
+    <div className="pb-20">
 
       {/* Recipe Image */}
       {recipe.imageUrl && (

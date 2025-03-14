@@ -77,7 +77,7 @@ const GuidedBakingMode: React.FC = () => {
 
   if (!recipe) {
     return (
-      <div className="min-h-screen bg-sous-background flex items-center justify-center">
+      <div className="pb-20 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-xl font-bold mb-2">Recipe not found</h2>
           <button
@@ -94,7 +94,7 @@ const GuidedBakingMode: React.FC = () => {
   const progress = ((currentStepIndex + 1) / recipe.steps.length) * 100;
 
   return (
-    <div className="min-h-screen bg-sous-background dark:bg-gray-900">
+    <div className="pb-20">
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 dark:bg-gray-700">
         <div

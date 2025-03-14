@@ -14,7 +14,7 @@ const IngredientDetail: React.FC = () => {
 
   if (!ingredient) {
     return (
-      <div className="min-h-screen bg-sous-background flex items-center justify-center">
+      <div className="pb-20 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-xl font-bold mb-2">Ingredient not found</h2>
           <button
@@ -31,7 +31,7 @@ const IngredientDetail: React.FC = () => {
   const isFavorite = preferences.favoriteIngredients.includes(ingredient.id);
 
   return (
-    <div className="min-h-screen bg-sous-background pb-20">
+    <div className="pb-20">
       {/* Hero Image Section */}
       <div className="relative h-64">
         <img

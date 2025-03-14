@@ -65,7 +65,7 @@ const MeasureInterface: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-sous-background dark:bg-gray-900 pb-20">
+    <div className="pb-20">
       {/* Main Display */}
       <div className="p-4 bg-white dark:bg-gray-800 shadow-sm">
         <div className="text-center p-8">

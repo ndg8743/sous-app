@@ -14,7 +14,7 @@ const HomeScreen: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-sous-background dark:bg-gray-900 bg-day-bg pb-20">
+    <div className="pb-20">
       {/* Personalized Greeting */}
       <div className="p-6">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white text-day-text">
