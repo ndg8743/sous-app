@@ -28,11 +28,11 @@ const SplashScreen: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-day-bg dark:bg-dark-bg">
-      <div className="relative">
-        <SousLogo size="large" className="mb-8" />
+      <div className="relative mb-16">
+        <SousLogo size="xlarge" className="mb-16" />
         
         {/* Mixing animation */}
-        <div className="absolute -top-4 -right-4 text-4xl">
+        <div className="absolute top-0 right-0 text-5xl">
           {animationStep >= 1 && (
             <span className="animate-spin inline-block">
               <i className="fas fa-utensils"></i>
@@ -41,7 +41,7 @@ const SplashScreen: React.FC = () => {
         </div>
         
         {/* Baking animation */}
-        <div className="absolute -bottom-4 -left-4 text-4xl">
+        <div className="absolute bottom-0 left-0 text-5xl">
           {animationStep >= 2 && (
             <span className="animate-pulse inline-block">
               <i className="fas fa-bread-slice"></i>
@@ -50,7 +50,7 @@ const SplashScreen: React.FC = () => {
         </div>
         
         {/* Measuring animation */}
-        <div className="absolute -bottom-4 -right-4 text-4xl">
+        <div className="absolute bottom-0 right-0 text-5xl">
           {animationStep >= 3 && (
             <span className="animate-bounce inline-block">
               <i className="fas fa-balance-scale"></i>
@@ -59,12 +59,8 @@ const SplashScreen: React.FC = () => {
         </div>
       </div>
       
-      <h1 className="text-3xl font-bold mt-8 text-day-text dark:text-dark-text">
-        SOUS
-      </h1>
-      
-      <p className="text-lg text-day-text dark:text-dark-text mt-2 animate-pulse">
-        Your smart baking measurement assistant
+      <p className="text-2xl text-day-text dark:text-dark-text mt-8 animate-pulse">
+        Your second hand in the kitchen
       </p>
     </div>
   );

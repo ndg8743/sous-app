@@ -21,7 +21,7 @@ const App: React.FC = () => {
   return (
     <PreferencesProvider>
       <Router>
-        <div className="min-h-screen bg-sous-background dark:bg-gray-900">
+        <div className="min-h-screen bg-day-bg dark:bg-gray-900">
           <Routes>
             {/* Redirect root to splash screen */}
             <Route path="/" element={<SplashScreen />} />

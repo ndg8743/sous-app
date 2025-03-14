@@ -1,23 +1,26 @@
 import React from 'react';
 
 interface SousLogoProps {
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'xlarge';
   className?: string;
 }
 
 const SousLogo: React.FC<SousLogoProps> = ({ size = 'medium', className = '' }) => {
   // Size classes based on the size prop
   const sizeClasses = {
-    small: 'w-8 h-8',
-    medium: 'w-16 h-16',
-    large: 'w-32 h-32',
+    small: 'w-12 h-12', // Increased from w-8 h-8
+    medium: 'w-24 h-24', // Increased from w-16 h-16
+    large: 'w-48 h-48', // Increased from w-32 h-32
+    xlarge: 'w-96 h-96', // Extra large size for splash screen
   };
 
   return (
     <div className={`flex items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} flex flex-col items-center justify-center bg-logo-bg text-day-text font-bold rounded-full`}>
-        <span className={`${size === 'small' ? 'text-xs' : size === 'medium' ? 'text-xl' : 'text-4xl'}`}>SOUS</span>
-      </div>
+      <img 
+        src={`${process.env.PUBLIC_URL}/sous_logo.png`} 
+        alt="SOUS Logo" 
+        className={`${sizeClasses[size]} object-contain`}
+      />
     </div>
   );
 };

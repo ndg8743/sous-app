@@ -23,14 +23,14 @@ module.exports = {
         bounce: 'bounce 1s infinite',
       },
       colors: {
-        // Original colors
-        'sous-primary': '#4F46E5',
-        'sous-primary-dark': '#4338CA',
-        'sous-secondary': '#6B7280',
-        'sous-accent': '#C8A27C', // Light brown accent color
-        'sous-background': '#F3F4F6',
-        'sous-success': '#10B981',
-        'sous-error': '#EF4444',
+        // Logo-based colors
+        'sous-primary': '#30C8E6', // Blue from logo
+        'sous-primary-dark': '#1EAFD0', // Darker blue
+        'sous-secondary': '#FFA726', // Orange from logo
+        'sous-accent': '#654321', // brown from logo
+        'sous-background': '#FFD6E5', // Pink from logo
+        'sous-success': '#10B981', // Keep original success color
+        'sous-error': '#EF4444', // Keep original error color
         
         // Dark Mode (Black)
         'dark-bg': '#121212',
@@ -42,16 +42,16 @@ module.exports = {
         'night-surface': '#334155',
         'night-text': '#F8FAFC',
         
-        // Day Mode (Earth Brown) - Enhanced with more browns
-        'day-bg': '#E6CCB2', // Darker brown background
-        'day-surface': '#D5BDAF', // Slightly darker surface
-        'day-accent': '#A98467',
-        'day-text': '#2D2424',
-        'day-dark': '#8B5E34',
-        'day-light': '#E6CCB2',
-        'day-medium': '#C8A27C',
-        'day-highlight': '#B68D5F',
-        'day-shadow': '#7D5A44',
+        // Day Mode (Logo-inspired)
+        'day-bg': '#FFD6E5', // Pink from logo
+        'day-surface': '#FFF0F5', // Lighter pink
+        'day-accent': '#30C8E6', // Blue from logo
+        'day-text': '#3E2723', // Dark brown from logo text
+        'day-dark': '#654321', // brown from logo
+        'day-light': '#F5F0E1', // Cream from logo (flour bag)
+        'day-medium': '#FFA726', // Orange from logo
+        'day-highlight': '#30C8E6', // Blue from logo
+        'day-shadow': '#3E2723', // Dark brown from logo text
         
         // White Mode
         'white-bg': '#FFFFFF',
@@ -60,7 +60,7 @@ module.exports = {
         'white-text': '#111827',
         
         // Logo background
-        'logo-bg': '#D5BDAF',
+        'logo-bg': '#FFD6E5', // Pink from logo
       },
     },
   },

@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 w-full bg-white dark:bg-gray-800 shadow-lg border-t border-gray-200 dark:border-gray-700">
+    <nav className="fixed bottom-0 w-full bg-day-surface dark:bg-gray-800 shadow-lg border-t border-day-accent dark:border-gray-700">
       <div className="flex justify-around">
         {navItems.map((item) => (
           <button
@@ -64,7 +64,7 @@ const Navigation: React.FC = () => {
             onClick={() => navigate(item.path)}
             className={`flex flex-col items-center justify-center p-4 w-full ${
               isActive(item.path)
-                ? 'text-sous-primary dark:text-sous-primary-light'
+                ? 'text-sous-primary dark:text-sous-primary'
                 : 'text-gray-400 dark:text-gray-500'
             }`}
           >

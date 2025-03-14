@@ -51,8 +51,9 @@ const Header: React.FC<HeaderProps> = ({
     <>
       {showSplash && <SplashScreen />}
       
-      <header className="bg-white dark:bg-gray-800 bg-day-surface shadow-md p-4 flex items-center justify-between h-16">
-        <div className="flex items-center space-x-3">
+      <header className="bg-day-surface dark:bg-gray-800 shadow-md p-4 h-16 relative">
+        {/* Left side - Back button */}
+        <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
           {showBackButton && (
             <button 
               onClick={handleBack}
@@ -64,17 +65,22 @@ const Header: React.FC<HeaderProps> = ({
               </svg>
             </button>
           )}
-          {showLogo && (
-            <div onClick={handleLogoClick} className="cursor-pointer">
-              <SousLogo size="small" />
-            </div>
-          )}
-          {title && (
+          {title && title !== "SOUS" && (
             <h1 className="text-xl font-semibold text-gray-900 dark:text-white text-day-text">{title}</h1>
           )}
         </div>
+        
+        {/* Center - Logo */}
+        <div className="flex justify-center items-center h-full">
+          {showLogo && (
+            <div onClick={handleLogoClick} className="cursor-pointer">
+              <SousLogo size="large" />
+            </div>
+          )}
+        </div>
 
-        <div className="flex items-center space-x-4">
+        {/* Right side - Status indicators */}
+        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex items-center space-x-4">
           {/* Current Time */}
           <div className="text-sm font-medium text-gray-700 dark:text-gray-300 text-day-text">
             {currentTime}
