@@ -28,16 +28,16 @@ jobs:
         cache: 'npm'
     
     - name: Install dependencies
+      working-directory: ./sous-app
       run: npm ci
     
     - name: Build
+      working-directory: ./sous-app
       run: npm run build
-      env:
-        PUBLIC_URL: /sous-app
     
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: build
-        branch: github-pages
+        folder: sous-app/build
+        branch: gh-pages
         clean: true

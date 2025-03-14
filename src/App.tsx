@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { PreferencesProvider } from './context/PreferencesContext';
 
 // Layout Components
@@ -20,7 +20,7 @@ import SettingsScreen from './components/settings/SettingsScreen';
 const App: React.FC = () => {
   return (
     <PreferencesProvider>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div className="min-h-screen bg-sous-background dark:bg-gray-900">
           <Routes>
             {/* Redirect root to splash screen */}
